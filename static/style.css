@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.images-promo {
+  display: flex;
+  animation: slide 20s infinite;
+  -webkit-animation: slide 20s infinite;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.wrapper .images-promo {
+  width: 100%;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-100%);
+  }
+  40% {
+    transform: translate(-200%);
+    -webkit-transform: translate(-200%);
+    -moz-transform: translate(-200%);
+    -ms-transform: translate(-200%);
+    -o-transform: translate(-200%);
+  }
+  60% {
+    transform: translate(-300%);
+    -webkit-transform: translate(-300%);
+    -moz-transform: translate(-300%);
+    -ms-transform: translate(-300%);
+    -o-transform: translate(-300%);
+  }
+  80% {
+    transform: translate(-200%);
+    -webkit-transform: translate(-200%);
+    -moz-transform: translate(-200%);
+    -ms-transform: translate(-200%);
+    -o-transform: translate(-200%);
+  }
+  100% {
+    transform: translate(-100%);
+    -webkit-transform: translate(-100%);
+    -moz-transform: translate(-100%);
+    -ms-transform: translate(-100%);
+    -o-transform: translate(-100%);
+  }
+  120% {
+    transform: translate(0%);
+    -webkit-transform: translate(0%);
+    -moz-transform: translate(0%);
+    -ms-transform: translate(0%);
+    -o-transform: translate(0%);
+  }
+}
+
+.card {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.035);
+  -webkit-transform: scale(1.035);
+  -moz-transform: scale(1.035);
+  -ms-transform: scale(1.035);
+  -o-transform: scale(1.035);
+  box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.zoom {
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-container:hover .zoom {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .image-container {
+    height: 400px;
+  }
+}
+
+.typing {
+  animation: typing 6s steps(40) step-end infinite;
+  -webkit-animation: typing 6s steps(40) step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
